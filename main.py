@@ -1,58 +1,84 @@
-#coment
-#hello
+# RED = '\u001b[41m'
+# BLUE = '\u001b[44m'
+# WHITE = '\u001b[47m'
+# BLACK = '\u001b[30m'
+# END = '\u001b[0m'
 
-RED = '\u001b[41m'
-BLUE = '\u001b[44m'
-WHITE = '\u001b[47m'
-END = '\u001b[0m'
-
-'''for i in range(6):
-    if i < 3:
-        print(f'{BLUE}{"  " * (2 * i + 2)}{WHITE}{"  " * (14 - 2 * i)}{END}')
-    else:
-        print(f'{BLUE}{"  " * (12 - 2 * i)}{RED}{"  " * (4 + 2 * i)}{END}')'''
+# # for i in range(6):
+# #     if i < 2:
+# #         print(f'{RED}{"  " * 14}{END}')
+# #     elif i > 1 and i < 4:
+# #         print(f'{WHITE}{"  " * 14}{END}')
+# #     else:
+# #         print(f'{BLUE}{"  " * 14}{END}')
 
 
-plot_list = [[0 for i in range(10)] for i in range(10)]
-result = [0 for i in range(10)]
+# plot_list = [[0 for i in range(10)] for i in range(10)]
+# result = [0 for i in range(10)]
 
-for i in range(10):
-    result[i] = i ** 3
+# for i in range(10):
+#     result[i] = 2 * i
 
-step = round(abs(result[0] - result[9]) / 9, 2)
-print(step)
+# step = round(abs(result[0] - result[9]) / 9, 2)
+# print(step)
 
-for i in range(10):
-    for j in range(10):
-        if j == 0:
-            plot_list[i][j] = step * (8-i) + step
+# for i in range(10):
+#     for j in range(10):
+#         if j == 0:
+#             plot_list[i][j] = step * (8-i) + step
 
-for i in range(9):
-    for j in range(10):
-        if abs(plot_list[i][0] - result[9 - j]) < step:
-            for k in range(9):
-                if 8 - k == j:
-                    plot_list[i][k+1] = 1
+# for i in range(9):
+#     for j in range(10):
+#         if abs(plot_list[i][0] - result[9 - j]) < step:
+#             for k in range(9):
+#                 if 8 - k == j:
+#                     plot_list[i][k+1] = 1
 
-for i in range(9):
-    line = ''
-    for j in range(10):
-        if j == 0:
-            line += '\t' + str(int(plot_list[i][j])) + '\t'
-        if plot_list[i][j] == 0:
-            line += '--'
-        if plot_list[i][j] == 1:
-            line += '!!'
-    print(line)
-print('\t0\t1 2 3 4 5 6 7 8 9')
+# for i in range(9):
+#     line = ''
+#     for j in range(10):
+#         if j == 0:
+#             line += '\t' + str(int(plot_list[i][j])) + '\t'
+#         if plot_list[i][j] == 0:
+#             line += '--'
+#         if plot_list[i][j] == 1:
+#             line += '!!'
+#     print(line)
+# print('\t0\t1 2 3 4 5 6 7 8 9')
 
-for i in range(10):
-    #print(plot_list[i])
-    pass
+# for i in range(10):
+#     print(plot_list[i])
+#     pass
 
-file = open('sequence.txt', 'r')
-list = []
-for number in file:
-    list.append(float(number))
-file.close()
-print(list)
+# file = open('sequence.txt', 'r')
+# list = []
+# for number in file:
+#     list.append(float(number))
+# file.close()
+# sum_nechet = 0
+# sum_chet = 0
+# for i in range(len(list)):
+#     if i % 2 == 0:
+#         sum_nechet += list[i]
+#     else:
+#         sum_chet += list[i]
+# print(round(sum_chet,2), round(sum_nechet, 2))
+
+# nechet = []
+# chet = []
+# for i in range(len(list)):
+#     if i % 2 == 0:
+#         nechet.append(float(list[i]))
+#     else:
+#         chet.append(float(list[i]))
+# print(round(sum(nechet),2), round(sum(chet),2))
+
+# size = 20
+
+# for i in range(size):
+#     for j in range(size):
+#         if i == j or i + j == size - 1:
+#             print(f'{WHITE}{"  " * 1}{END}', end =" ")
+#         else:
+#             print(" ", end="")
+#     print()
